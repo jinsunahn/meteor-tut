@@ -21,7 +21,7 @@ Package.onUse(function(api, where) {
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('jinsunahn:errors');
-  api.addFiles('errors-tests.js');
+  api.use('jinsunahn:errors', 'client');
+  api.use(['tinytest', 'test-helpers'], 'client');  
+  api.addFiles('errors-tests.js', 'client');
 });
